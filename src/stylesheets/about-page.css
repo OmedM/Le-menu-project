@@ -1,0 +1,55 @@
+.about_main_section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(0deg, rgba(212,174,231,0.3) 0%, rgba(255,255,255,1) 50%, rgba(212,174,231,0.3) 100%);
+}
+
+.about_ldiv {
+    max-width: 40%;
+}
+
+.about_header {
+    font-size: 8vh;
+}
+
+.about_hline {
+    height: 0.1rem;
+    max-width: 100%;
+    background-color: #000;
+    border-radius: 1000rem;
+    margin-bottom: 1.5rem;
+}
+
+.about_txt {
+    font-size: 3vh;
+}
+
+.about_rdiv {
+    max-width: 40%;
+}
+
+.about_logo {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .about_main_section {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .about_rdiv {
+        max-width: 80%;
+    }
+    .about_ldiv {
+        max-width: 90%;
+    }
+    .about_header {
+        font-size: 5vh;
+    }
+    .about_txt {
+        font-size: 2.5vh;
+    }    
+}

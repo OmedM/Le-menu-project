@@ -1,0 +1,124 @@
+.hero_section {
+    height: 100vh;
+    background: url('../figures/landing-bg.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero_logo {
+    width: 30%;
+}
+
+.hero_hline {
+    width: 60vw;
+    height: 0.2rem;
+    background-color: #000;
+    border-radius: 100px;
+}
+
+.hero_text {
+    font-size: 6vh;
+}
+
+.slide2 {
+    height: 70vh;
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(212,174,231,1) 100%);
+}
+
+.slide2_ldiv {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 35%;
+}
+
+.slide2_txt {
+    font-size: 3vh;
+    text-align: justify;
+}
+
+.slide2_btn {
+    font-size: 3vh;
+    font-family: 'Oswald', sans-serif;
+    background-color: #5F2F76;
+    color: #fff;
+    padding: 0.5rem 4rem;
+    border: none;
+    border-radius: 0.8rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.slide2_rdiv {
+    max-width: 40rem;
+}
+
+.slide2_img {
+    width: 100%;
+}
+
+.slide3 {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    background: url('../figures/slide3-img.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 90%;
+    padding: 15rem 0rem;
+}
+
+.slide3_header {
+    font-size: 4vw;
+}
+
+.slide3_txt {
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .hero_logo {
+        width: 75%;
+    }
+    
+    .hero_hline {
+        width: 80%;
+    }
+    
+    .slide2 {
+        height: fit-content;
+        gap: 3rem;
+        flex-direction: column;
+    }
+    
+    .slide2_ldiv {
+        max-width: 90%;
+    }
+    
+    .slide2_rdiv {
+        max-width: 90%;
+    }
+    
+    .slide3 {
+        height: fit-content;
+    }
+    
+    .slide3_header {
+        font-size: 7vw;
+    }
+    
+    .slide3_txt {
+        font-size: 4vw;
+    }
+}

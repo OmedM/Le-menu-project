@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav {
+    background-color: #5F2F76;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 3.5rem;
+    font-size: 1.3rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+.nav_logo {
+    height: 3.8rem;
+}
+
+.nav_items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.nav_btn_div {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0rem 0.8rem;
+        height: 3.5rem;
+        font-size: 1.3rem;
+    }
+
+    .nav_btn_div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+      width: 3.5rem;
+    }
+    
+    .nav_items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+        position: fixed;
+        font-size: 2.5rem;
+        padding: 0;
+        padding-bottom: 7rem;
+        top: 3.5rem;
+        right: 0;
+        height: 100vh;
+        width: 100vw;
+        background: #5F2F76;
+        flex-direction: column;
+        clip-path: circle(10px at 100% -10%);
+        -webkit-clip-path: circle(10px at 100% -10%);
+        transition: all 0.4s ease-out;
+    }
+
+    .nav_items.open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+        position: fixed;
+        font-size: 2.5rem;
+        padding: 0;
+        padding-bottom: 7rem;
+        top: 3.5rem;
+        right: 0;
+        height: 100vh;
+        width: 100vw;
+        background: #5F2F76;
+        flex-direction: column;
+        clip-path: circle(150vh at 50% 50%);
+        -webkit-clip-path: circle(150vh at 50% 50%);
+        transition: all 0.4s ease-out;
+    }
+
+    .nav_btn_line {
+        width: 2rem;
+        height: 0.1rem;
+        margin: 0.2rem;
+        border: none;
+        border-radius: 100000rem;
+        background-color: #fff;
+    }
+}
