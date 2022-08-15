@@ -24,6 +24,9 @@ const menuSlice = createSlice({
                 description: newMenu.description,
                 url: newMenu.url
             })
+            console.log({newMenu});
+            console.log({state: state});
+
         }
     }
 });

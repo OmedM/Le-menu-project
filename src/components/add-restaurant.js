@@ -17,16 +17,15 @@ function AddRestaurant() {
         const name = event.target.name;
         const value = event.target.value;
         setData(values => ({...values, [name]: value}))
-        console.log(data);
     }
     const dispatch = useDispatch();
-    console.log(data);
 
     const name = 'abc';
     const description = '$$$$$$$$$$$$';
     const url = '#';
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault()
         dispatch(menuActions.addMenu({
             name,
             description,

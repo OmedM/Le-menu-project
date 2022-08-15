@@ -12,8 +12,8 @@ function Footer() {
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                     <hr className='hr'/>
-                    <li><a href='https://github.com/OmedM/LeMenu' target='_Blank'>Source Code</a></li>
-                    <li><a href='https://www.figma.com/file/K7Wub7vHFySGFVxwrKzGA1/Untitled' target='_Blank'>Design</a></li>
+                    <li><a href='https://github.com/OmedM/Le-menu-project' target='_Blank'>Source Code</a></li>
+                    <li><a href='https://www.figma.com/file/K7Wub7vHFySGFVxwrKzGA1/Le-menu?node-id=0%3A1' target='_Blank'>Design</a></li>
                 </ul>
             </div>
             <img src={logo} className='footer_logo'/>
