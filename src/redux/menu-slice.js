@@ -19,14 +19,14 @@ const menuSlice = createSlice({
         addMenu(state, action) {
             const newMenu = action.payload;
 
+            const newId = state.menuList.length;
+
             state.menuList.push({
+                id: newId,
                 name: newMenu.name,
                 description: newMenu.description,
                 url: newMenu.url
             })
-            console.log({newMenu});
-            console.log({state: state});
-
         }
     }
 });
