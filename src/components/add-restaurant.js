@@ -1,4 +1,5 @@
-import React, { memo, useState} from 'react';
+import { useNavigate } from 'react-router-dom';
+import React, { memo, useState } from 'react';
 import '../stylesheets/add-restaurant.css';
 import { useDispatch } from 'react-redux';
 import { menuActions } from '../redux/menu-slice.js';
@@ -11,6 +12,7 @@ function AddRestaurant() {
     });
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     
     const handleChange = (event) => {
         const name = event.target.name;
@@ -29,6 +31,7 @@ function AddRestaurant() {
             description,
             url
         }));
+        navigate('/restaurants');
     }
     return (
         <div className='add_restaurant_main_section'>
@@ -37,13 +40,14 @@ function AddRestaurant() {
                 <div className='form_input_div'>
                     <label for='name'>Name:
                         <input
-                        className='form_input'
-                        type='text'
-                        name='name'
-                        id='name'
-                        maxlength='20'
-                        value={data.name || ''}
-                        onChange={handleChange}
+                            className='form_input'
+                            type='text'
+                            name='name'
+                            id='name'
+                            maxlength='20'
+                            value={data.name || ''}
+                            onChange={handleChange}
+                            required
                         />
                     </label>
                 </div>
@@ -51,13 +55,14 @@ function AddRestaurant() {
                 <div className='form_input_div'>
                     <label for='description'>description:
                         <input
-                        className='form_input'
-                        type='text'
-                        name='description'
-                        id='description'
-                        maxlength='80'
-                        value={data.description || ''}
-                        onChange={handleChange}
+                            className='form_input'
+                            type='text'
+                            name='description'
+                            id='description'
+                            maxlength='80'
+                            value={data.description || ''}
+                            onChange={handleChange}
+                            required
                         />
                     </label>
                 </div>
@@ -65,12 +70,12 @@ function AddRestaurant() {
                 <div className='form_input_div'>
                     <label for='url'>Image:
                         <input
-                        className='form_input'
-                        type='text'
-                        name='url'
-                        id='url'
-                        value={data.url || ''}
-                        onChange={handleChange}
+                            className='form_input'
+                            type='text'
+                            name='url'
+                            id='url'
+                            value={data.url || ''}
+                            onChange={handleChange}
                         />
                     </label>
                 </div>
