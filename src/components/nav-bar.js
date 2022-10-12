@@ -5,7 +5,6 @@ import logo from '../figures/logo-white.png';
 
 function Nav() {
     const [isOpen, setIsOpen] = useState(false);
-    console.log(isOpen);
 
     return (
         <nav className='nav'>

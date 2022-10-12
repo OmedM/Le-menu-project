@@ -20,7 +20,7 @@ function Restaurants() {
             {
                 menus && menus.map(
                     (menu) => (
-                        <Card restaurant={menu}/>
+                        <Card restaurant={menu} key={menu.id}/>
                     )
                 )
             }

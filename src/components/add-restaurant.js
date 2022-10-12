@@ -3,6 +3,7 @@ import React, { memo, useState } from 'react';
 import '../stylesheets/add-restaurant.css';
 import { useDispatch } from 'react-redux';
 import { menuActions } from '../redux/menu-slice.js';
+import TextField from '@mui/material/TextField';
 
 function AddRestaurant() {
     const [data, setData] = useState({
@@ -38,46 +39,49 @@ function AddRestaurant() {
             <h1 className='form_header'>Fill your restaurant's info</h1>
             <form className='form' onSubmit={handleSubmit}>
                 <div className='form_input_div'>
-                    <label for='name'>Name:
-                        <input
-                            className='form_input'
+                        <TextField
+                            color='secondary'
+                            label="Name"
+                            variant="outlined"
                             type='text'
                             name='name'
                             id='name'
                             maxlength='20'
                             value={data.name || ''}
                             onChange={handleChange}
+                            fullWidth
                             required
                         />
-                    </label>
                 </div>
 
                 <div className='form_input_div'>
-                    <label for='description'>description:
-                        <input
-                            className='form_input'
-                            type='text'
-                            name='description'
-                            id='description'
-                            maxlength='80'
-                            value={data.description || ''}
-                            onChange={handleChange}
-                            required
-                        />
-                    </label>
+                    <TextField
+                        color='secondary'
+                        label="Description"
+                        variant="outlined"
+                        type='text'
+                        name='description'
+                        id='description'
+                        maxlength='80'
+                        value={data.description || ''}
+                        onChange={handleChange}
+                        fullWidth
+                        required
+                    />
                 </div>
                 
                 <div className='form_input_div'>
-                    <label for='url'>Image:
-                        <input
-                            className='form_input'
-                            type='text'
-                            name='url'
-                            id='url'
-                            value={data.url || ''}
-                            onChange={handleChange}
-                        />
-                    </label>
+                    <TextField
+                        color='secondary'
+                        label="Image"
+                        variant="outlined"
+                        type='text'
+                        name='url'
+                        id='url'
+                        value={data.url || ''}
+                        onChange={handleChange}
+                        fullWidth
+                    />
                 </div>
 
                 <button type='submit' className='form_submit_btn'>Submit</button>
