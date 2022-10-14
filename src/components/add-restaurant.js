@@ -36,8 +36,12 @@ function AddRestaurant() {
     }
     return (
         <div className='add_restaurant_main_section'>
-            <h1 className='form_header'>Fill your restaurant's info</h1>
+            <h1 className='form_header'>Add new restaurant</h1>
             <form className='form' onSubmit={handleSubmit}>
+
+                <h2>Basics</h2>
+                <hr style={{marginBottom: '1rem'}}/>
+
                 <div className='form_input_div'>
                         <TextField
                             color='secondary'
@@ -83,6 +87,59 @@ function AddRestaurant() {
                         fullWidth
                     />
                 </div>
+
+                <h2>Contact</h2>
+                <hr style={{marginBottom: '1rem'}}/>
+
+                <div className='form_input_div'>
+                    <TextField
+                        color='secondary'
+                        label="Address"
+                        variant="outlined"
+                        type='text'
+                        name='address'
+                        id='address'
+                        fullWidth
+                    />
+                </div>
+
+                <div className='form_input_div'>
+                    <TextField
+                        color='secondary'
+                        label="Phone number"
+                        variant="outlined"
+                        type='text'
+                        name='number'
+                        id='number'
+                        fullWidth
+                    />
+                </div>
+
+                <h2>Menu</h2>
+                <hr style={{marginBottom: '1rem'}}/>
+
+                <div className='form_input_div_menu'>
+                    <TextField
+                        color='secondary'
+                        label="Dish name"
+                        variant="outlined"
+                        type='text'
+                        name='number'
+                        id='number'
+                        fullWidth
+                    />
+                    <TextField
+                        color='secondary'
+                        label="Price"
+                        variant="outlined"
+                        type='text'
+                        name='number'
+                        id='number'
+                        fullWidth
+                    />
+                </div>
+
+                <button className='add_menu_btn'>+</button>
 
                 <button type='submit' className='form_submit_btn'>Submit</button>
             </form>
