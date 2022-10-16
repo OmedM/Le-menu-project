@@ -8,15 +8,33 @@ import youtubeLogo from '../figures/contact-youtube.png';
 import phoneImg from '../figures/contact-callus.png';
 import locationImg from '../figures/contact-location.png';
 import hourImg from '../figures/contact-business-hours.png'
+import TextField from '@mui/material/TextField';
 
 function Contact() {
     return (
         <div className='contact_main_section'>
             <div className='contact_ldiv'>
                 <h1 className='contact_header'>Contact us</h1>
-                <input type='text' className='contact_input' placeHolder='Enter your name'/>
-                <input type='text' className='contact_input' placeHolder='Enter your E-mail'/>
-                <textarea className='contact_txt_area' placeholder='Enter your massage'/>
+                <TextField
+                    className='contact_input'
+                    label='Enter your name'
+                    variant='outlined'
+                    type='text'
+                />
+                <TextField
+                    className='contact_input'
+                    label='Enter your email'
+                    variant='outlined'
+                    type='text'
+                />
+                <TextField
+                    className='contact_txt_area'
+                    label='Enter your message'
+                    variant='outlined'
+                    type='text'
+                    multiline
+                    rows={5}
+                />
                 <button type='button' className='contact_btn'>Submit</button>
             </div>
             <div className='contact_vline'></div>

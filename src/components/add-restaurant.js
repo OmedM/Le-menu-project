@@ -50,7 +50,7 @@ function AddRestaurant() {
                             type='text'
                             name='name'
                             id='name'
-                            maxlength='20'
+                            maxLength='20'
                             value={data.name || ''}
                             onChange={handleChange}
                             fullWidth
@@ -66,7 +66,7 @@ function AddRestaurant() {
                         type='text'
                         name='description'
                         id='description'
-                        maxlength='80'
+                        maxLength='80'
                         value={data.description || ''}
                         onChange={handleChange}
                         fullWidth
