@@ -100,6 +100,7 @@ function AddRestaurant() {
                         name='address'
                         id='address'
                         fullWidth
+                        required
                     />
                 </div>
 
@@ -139,7 +140,10 @@ function AddRestaurant() {
                     />
                 </div>
 
-                <button className='add_menu_btn'>+</button>
+                <button
+                    className='add_menu_btn'
+                    type='button'
+                >+</button>
 
                 <button type='submit' className='form_submit_btn'>Submit</button>
             </form>
