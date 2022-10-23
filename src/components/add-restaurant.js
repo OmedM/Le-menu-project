@@ -123,9 +123,9 @@ function AddRestaurant() {
 
                 <div className='form_menu_section'>
                     {
-                        menu.map((item) => {
+                        menu.map((item, index) => {
                             return (
-                                <div key={item} className='form_input_div_menu'>
+                                <div value={item} className='form_input_div_menu'>
                                     <TextField
                                         color='secondary'
                                         label="Dish name"
@@ -137,13 +137,23 @@ function AddRestaurant() {
                                     />
                                     <TextField
                                         color='secondary'
-                                        label="Price"
+                                        label="Price (in $)"
                                         variant="outlined"
-                                        type='text'
+                                        type='number'
+                                        InputProps={{ inputProps: { min: 0 } }}
                                         name='number'
                                         id='number'
                                         fullWidth
                                     />
+                                    <button
+                                        className='delete_menu_btn'
+                                        type='button'
+                                        onClick={() => {
+                                            const currentItems = menu.filter((x, y) => { return index !== y })
+                                            setMenu(currentItems)
+                                        }}
+
+                                    >-</button>
                                 </div>
                             )
                         })
