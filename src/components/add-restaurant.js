@@ -11,7 +11,9 @@ function AddRestaurant() {
     const [data, setData] = useState({
         name: '',
         description: '',
-        url: ''
+        url: '',
+        address: '',
+        number: '',
     });
 
     const dispatch = useDispatch();
@@ -26,13 +28,17 @@ function AddRestaurant() {
     const name = data.name;
     const description = data.description;
     const url = data.url;
+    const address = data.address;
+    const number = data.number;
 
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(menuActions.addMenu({
             name,
             description,
-            url
+            url,
+            address,
+            number
         }));
         navigate('/restaurants');
     }
@@ -100,6 +106,8 @@ function AddRestaurant() {
                         variant="outlined"
                         type='text'
                         name='address'
+                        value={data.address || ''}
+                        onChange={handleChange}
                         id='address'
                         fullWidth
                         required
@@ -113,6 +121,8 @@ function AddRestaurant() {
                         variant="outlined"
                         type='text'
                         name='number'
+                        value={data.number || ''}
+                        onChange={handleChange}
                         id='number'
                         fullWidth
                     />
@@ -125,7 +135,7 @@ function AddRestaurant() {
                     {
                         menu.map((item, index) => {
                             return (
-                                <div value={item} className='form_input_div_menu'>
+                                <div value={item} key={index} className='form_input_div_menu'>
                                     <TextField
                                         color='secondary'
                                         label="Dish name"
