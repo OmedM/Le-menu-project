@@ -6,6 +6,8 @@ import { menuActions } from '../redux/menu-slice.js';
 import TextField from '@mui/material/TextField';
 
 function AddRestaurant() {
+    const [menu, setMenu] = useState([null]);
+
     const [data, setData] = useState({
         name: '',
         description: '',
@@ -119,30 +121,43 @@ function AddRestaurant() {
                 <h2>Menu</h2>
                 <hr style={{marginBottom: '1rem'}}/>
 
-                <div className='form_input_div_menu'>
-                    <TextField
-                        color='secondary'
-                        label="Dish name"
-                        variant="outlined"
-                        type='text'
-                        name='number'
-                        id='number'
-                        fullWidth
-                    />
-                    <TextField
-                        color='secondary'
-                        label="Price"
-                        variant="outlined"
-                        type='text'
-                        name='number'
-                        id='number'
-                        fullWidth
-                    />
+                <div className='form_menu_section'>
+                    {
+                        menu.map((item) => {
+                            return (
+                                <div key={item} className='form_input_div_menu'>
+                                    <TextField
+                                        color='secondary'
+                                        label="Dish name"
+                                        variant="outlined"
+                                        type='text'
+                                        name='number'
+                                        id='number'
+                                        fullWidth
+                                    />
+                                    <TextField
+                                        color='secondary'
+                                        label="Price"
+                                        variant="outlined"
+                                        type='text'
+                                        name='number'
+                                        id='number'
+                                        fullWidth
+                                    />
+                                </div>
+                            )
+                        })
+                    }
                 </div>
 
                 <button
                     className='add_menu_btn'
                     type='button'
+                    onClick={
+                        () => {
+                            setMenu([...menu, null])
+                        }
+                    }
                 >+</button>
 
                 <button type='submit' className='form_submit_btn'>Submit</button>
